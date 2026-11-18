@@ -1,41 +1,85 @@
-# Project 03 — Responsive Product Pricing Cards
+# Product Pricing Cards
 
-A responsive SaaS pricing page built using HTML5, CSS3 and vanilla JavaScript.
+A modern, responsive SaaS pricing page featuring interactive monthly and yearly billing options, elegant pricing cards, and a clean user interface.
 
-## Requirements covered
-- Three pricing plans: Starter, Pro and Team
-- Monthly / Yearly billing switch using real button elements and `aria-pressed`
-- Plan prices stored in HTML `data-monthly` and `data-yearly` attributes
-- Yearly prices are approximately 20% cheaper than paying monthly for 12 months
-- Highlighted Popular plan with a ribbon-style label
-- CSS Grid layout, rounded cards, soft shadows and generous spacing
-- Smooth hover movement and stronger hover shadow
-- Reduced-motion support through `prefers-reduced-motion`
-- Responsive single-column layout below 800px; Popular plan appears first
-- Visible keyboard focus styles and accessible form/dialog labels
-- Clear call-to-action button on every card
+## 🌐 Live Demo
 
-## Working interactions
-- Plans and Why Nova navigation links scroll to their sections
-- Talk to us scrolls to the contact form
-- Each plan button opens a confirmation dialog showing the chosen plan and active billing period
-- Dialog can be closed with its close button, Got it button, backdrop, or Escape key
-- Contact form validates required fields and email format, then shows an on-page confirmation
+[View Live Website](https://muskanjoshi190.github.io/Product-Pricing-Cards/)
 
-## Demo limitation
-This is a front-end learning project. The contact form does not send or store messages, and the plan dialog does not create an account or process payment. Real email delivery, account creation, or checkout requires a backend or external service and is outside the supplied task requirements.
+## 📌 Overview
 
-## Run locally
-1. Extract the ZIP archive.
-2. Open the project folder in Visual Studio Code.
-3. Right-click `index.html` and choose **Open with Live Server** (or open it directly in a browser).
-4. Test Monthly and Yearly, all three plan buttons, navigation links, and the contact form.
-5. Check the page at 360px, 768px and 1280px widths.
-6. Capture one screenshot of the Monthly view and one of the Yearly view for submission.
+Product Pricing Cards is a responsive pricing website designed to present subscription plans in a clear and visually appealing way.
 
-## Project files
-- `index.html` — page structure and plan data
-- `style.css` — design, hover effects and responsive rules
-- `script.js` — billing toggle and interactions
+The project includes three pricing plans — Starter, Pro, and Team — with an interactive billing toggle that allows users to switch between monthly and yearly pricing.
 
-All prices and the Nova brand are fictional.
+## ✨ Features
+
+- **Three Pricing Plans:** Starter, Pro, and Team.
+- **Monthly & Yearly Toggle:** Switch between billing options dynamically.
+- **Popular Plan Highlight:** Visually highlighted Pro subscription.
+- **Interactive Plan Selection:** View selected plan details through a modal.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile screens.
+- **Hover Effects:** Smooth transitions and interactive card animations.
+- **Contact Form:** Frontend form validation with confirmation feedback.
+- **Accessibility:** Keyboard-friendly interactions and reduced-motion support.
+
+## 💳 Pricing Plans
+
+| Plan | Monthly | Yearly |
+|---|---:|---:|
+| Starter | ₹299/month | ₹2,870/year |
+| Pro | ₹699/month | ₹6,710/year |
+| Team | ₹1,299/month | ₹12,470/year |
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive CSS Grid
+- Google Fonts
+
+## 📂 Project Structure
+
+```text
+Product-Pricing-Cards/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## 📱 Responsive Design
+
+The website adapts to different screen sizes using responsive CSS layouts and media queries.
+
+- Desktop: Three-column pricing layout.
+- Tablet: Flexible card layout.
+- Mobile: Single-column layout with the popular plan displayed first.
+
+## ⚙️ Functionality
+
+- Dynamically updates pricing based on the selected billing cycle.
+- Displays the selected subscription plan and price.
+- Provides interactive navigation and contact form feedback.
+- Supports modal interactions through buttons, backdrop clicks, and keyboard controls.
+
+## 🚀 Future Improvements
+
+- Backend integration for contact form submissions.
+- User authentication and subscription management.
+- Secure payment gateway integration.
+- Database integration for managing subscription plans.
+
+## 👩‍💻 Author
+
+**Muskan Joshi**
+
+B.Tech Computer Science Engineering
+
+[GitHub](https://github.com/muskanjoshi190) · [LinkedIn](https://linkedin.com/in/muskan-joshi-140310341)
+
+---
+
+*Developed as a Frontend Web Development Project.*
