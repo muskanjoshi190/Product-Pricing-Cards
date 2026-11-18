@@ -1,0 +1,141 @@
+*{box-sizing:border-box}
+:root{--ink:#18231e;--muted:#77817a;--lime:#c8f36b;--lime-deep:#9ed348;--paper:#f5f7f1;--line:#e7ebe3}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+.ambient{position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(1px)}
+.ambient-one{width:420px;height:420px;top:40px;left:-230px;background:radial-gradient(circle,#e4f3cf 0,transparent 70%)}
+.ambient-two{width:520px;height:520px;top:300px;right:-330px;background:radial-gradient(circle,#e8edda 0,transparent 70%)}
+.site-header,main,footer{width:min(1160px,calc(100% - 56px));margin:auto}
+.site-header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8ece4}
+.logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:800 24px "Manrope",sans-serif;letter-spacing:-1.5px}
+.logo-symbol{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:var(--lime);font:800 23px "Manrope",sans-serif;color:#26351f}
+.logo-period{color:#8cb94a;margin-left:-8px}
+nav{display:flex;align-items:center;gap:34px}
+nav a{font-size:12px;text-decoration:none;color:#68736b;font-weight:600;transition:color .2s}
+nav a:hover{color:#263b2c}
+nav .nav-contact{padding:11px 16px;border:1px solid #dce3d7;border-radius:8px;color:var(--ink)}
+.nav-contact span{margin-left:9px}
+.hero{text-align:center;padding:75px 0 54px}
+.eyebrow{display:flex;justify-content:center;align-items:center;gap:12px;color:#72836a;font-size:9px;font-weight:700;letter-spacing:2px}
+.eyebrow-line{width:25px;height:1px;background:#b6c7a9}
+h1{margin:21px 0 16px;font:800 clamp(43px,6vw,70px)/1.05 "Manrope",sans-serif;letter-spacing:-4.4px}
+h1 span{color:#819b6c}
+.hero-copy{max-width:490px;margin:0 auto;color:var(--muted);font-size:13px;line-height:1.8}
+.billing-area{margin-top:27px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.billing-switch{display:inline-flex;padding:4px;border:1px solid #e2e8dc;border-radius:11px;background:#edf1e9;gap:3px}
+.billing-btn{padding:10px 17px;border:0;border-radius:8px;background:transparent;color:#778078;font:600 11px "DM Sans",sans-serif;cursor:pointer;transition:all .2s}
+.billing-btn.active{background:white;color:#1b2820;box-shadow:0 2px 9px #263b2c12}
+.save-pill{display:inline-block;margin-left:5px;padding:3px 6px;border-radius:5px;background:#e4f3d1;color:#547b2e;font-size:8px;font-weight:800}
+.billing-hint{font-size:10px;color:#8b958d}.hint-star{color:#83ad4c;margin-right:4px}
+.plans-section{padding-bottom:30px}
+.section-meta{display:flex;justify-content:space-between;margin-bottom:13px;color:#9aa39b;font-size:8px;font-weight:700;letter-spacing:1.3px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;align-items:stretch}
+.plan-card{position:relative;background:#fff;border:1px solid #e6ebe3;border-radius:17px;padding:25px 25px 26px;box-shadow:0 8px 28px #273b2808;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.plan-card:hover{transform:translateY(-7px);box-shadow:0 20px 42px #273b2816;border-color:#cbd9c2}
+.plan-featured{border:1.5px solid #a9d96d;box-shadow:0 13px 35px #73994a17;background:linear-gradient(155deg,#fff 60%,#fbfff5)}
+.plan-featured:hover{border-color:#8dc64d}
+.popular-label{position:absolute;top:0;right:0;padding:8px 13px;border-radius:0 15px 0 12px;background:var(--lime);color:#314325;font-size:8px;font-weight:800;letter-spacing:1px}
+.popular-label span{margin-right:4px}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.plan-icon{display:grid;place-items:center;width:39px;height:39px;border-radius:12px}
+.plan-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.icon-starter{background:#eef3e9;color:#708b5b}.icon-pro{background:#eaf5db;color:#5d8734}.icon-team{background:#eef0f5;color:#69748e}
+.plan-number{color:#b9c0b8;font:600 10px "Manrope",sans-serif;letter-spacing:1px}
+.plan-kicker{margin:0 0 7px;color:#98a198;font-size:8px;font-weight:800;letter-spacing:1.5px}
+h2{margin:0;font:800 26px "Manrope",sans-serif;letter-spacing:-1px}
+.tiny-star{color:#8fbe4e;font-size:15px;vertical-align:top}
+.plan-desc{min-height:43px;margin:8px 0 21px;color:#77817a;font-size:11px;line-height:1.65}
+.price-wrap{display:flex;align-items:flex-start;gap:3px}
+.currency{margin-top:7px;font:700 17px "Manrope",sans-serif}
+.price{font:800 43px/1 "Manrope",sans-serif;letter-spacing:-2.7px;color:#1d2a22}
+.price-caption{display:flex;justify-content:space-between;align-items:center;margin:7px 0 18px}
+.billing-unit{color:#77817a;font-size:10px}
+.billed-note{color:#a3aaa3;font-size:9px}
+.cta{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border-radius:8px;text-decoration:none;font-size:10px;font-weight:700;transition:transform .2s,background .2s}
+.cta:hover{transform:translateY(-2px)}
+.cta span{font-size:15px}
+.cta-light{background:#f0f3ed;color:#29372d}.cta-light:hover{background:#e7eee0}
+.cta-dark{background:var(--lime);color:#26351f}.cta-dark:hover{background:#b9e85c}
+.feature-divider{height:1px;background:#edf0eb;margin:22px 0 17px}
+.feature-title{margin:0 0 14px;color:#9aa39b;font-size:8px;font-weight:800;letter-spacing:1.2px}
+.features{display:grid;gap:12px;list-style:none;padding:0;margin:0}
+.features li{display:flex;align-items:center;gap:9px;color:#59645d;font-size:10px}
+.tick{display:grid;place-items:center;width:16px;height:16px;flex:0 0 16px;border-radius:50%;background:#eff5e8;color:#6b9840;font-size:9px;font-weight:800}
+.trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:22px 24px;margin:24px 0 55px;border:1px solid #e6ebe2;border-radius:13px;background:#fbfcf9}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:11px}
+.trust-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#edf4e5;color:#6f9845;font-size:17px}
+.trust-item strong,.trust-item small{display:block}
+.trust-item strong{font-size:10px}.trust-item small{margin-top:3px;color:#929b93;font-size:9px}
+footer{display:flex;align-items:center;justify-content:space-between;padding:17px 0 22px;border-top:1px solid #e5eae1;color:#9aa39b;font-size:9px}
+.footer-logo{font-size:18px}.footer-logo .logo-symbol{width:25px;height:25px;border-radius:8px;font-size:18px}
+@media(max-width:800px){.site-header,main,footer{width:min(600px,calc(100% - 36px))}.plans{grid-template-columns:1fr;gap:15px}.plan-featured{order:-1}.plan-desc{min-height:0}.plan-card{padding:24px}.hero{padding-top:60px}.trust-strip{grid-template-columns:1fr;gap:18px;align-items:start}.trust-item{justify-content:flex-start}}
+@media(max-width:520px){.site-header{height:70px}nav{gap:14px}nav a{font-size:10px}nav a:nth-child(2){display:none}nav .nav-contact{padding:9px 11px}.logo{font-size:21px}.hero{padding:55px 0 38px}h1{letter-spacing:-2.8px}.eyebrow{font-size:7px;letter-spacing:1.2px;gap:7px}.eyebrow-line{width:15px}.hero-copy{font-size:12px}.section-meta{font-size:7px;letter-spacing:.7px}.plan-card{padding:22px}.trust-strip{margin-bottom:38px}footer{gap:10px;flex-wrap:wrap}footer>span:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}.plan-card:hover,.cta:hover{transform:none}}
+
+
+/* Functional CTA buttons and contact section */
+.cta{font-family:inherit;border:0;cursor:pointer;text-align:left;width:100%}
+.cta:focus-visible,.modal-close:focus-visible,.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:3px solid #8dbd51;outline-offset:3px}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:44px 38px;margin:0 0 55px;border:1px solid #e3e9df;border-radius:18px;background:linear-gradient(125deg,#fbfdf8,#f0f5e9)}
+.contact-copy h2{font:800 clamp(29px,4vw,43px)/1.12 "Manrope",sans-serif;letter-spacing:-2px}
+.contact-copy h2 span{color:#819b6c}
+.contact-copy>p:last-child{max-width:360px;color:#77817a;font-size:12px;line-height:1.8}
+.contact-form{display:grid;gap:8px}
+.contact-form label{margin-top:5px;color:#59645d;font-size:10px;font-weight:700}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #dfe6da;border-radius:8px;background:#fff;padding:11px 12px;color:#1d2a22;font:12px "DM Sans",sans-serif;resize:vertical}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#a5ada5}
+.contact-submit{margin-top:7px}
+.form-note{min-height:14px;margin:2px 0 0;color:#8b958d;font-size:9px}
+.form-note.success{color:#4f7b2e;font-weight:700}
+.modal-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#17231dcc;backdrop-filter:blur(5px)}
+.modal-backdrop[hidden]{display:none}
+.plan-modal{position:relative;width:min(420px,100%);padding:35px 30px 28px;border:1px solid #e5ebdf;border-radius:19px;background:#fff;box-shadow:0 25px 80px #101b1450;text-align:center;animation:modal-in .22s ease-out}
+@keyframes modal-in{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-close{position:absolute;top:12px;right:14px;width:31px;height:31px;border:0;border-radius:50%;background:#f0f3ed;color:#52604f;font-size:22px;cursor:pointer}
+.modal-mark{display:grid;place-items:center;width:45px;height:45px;margin:0 auto 17px;border-radius:14px;background:#eaf5db;color:#6b963d;font-size:22px}
+.plan-modal h2{font:800 27px "Manrope",sans-serif;letter-spacing:-1px}
+.plan-modal>p:not(.plan-kicker){color:#77817a;font-size:11px;line-height:1.7}
+.modal-summary{display:grid;gap:5px;margin:20px 0;padding:17px;border:1px solid #e7ece2;border-radius:11px;background:#f8faf5}
+.modal-summary span{color:#77817a;font-size:10px}
+.modal-summary strong{font:800 31px "Manrope",sans-serif;letter-spacing:-1px}
+.modal-summary small{color:#89938a;font-size:9px}
+.plan-modal .modal-disclaimer{font-size:9px;color:#9aa39b}
+.modal-done{margin-top:14px}
+body.modal-open{overflow:hidden}
+@media(max-width:800px){.contact-section{grid-template-columns:1fr;gap:22px;padding:28px 24px}}
+@media(max-width:520px){.contact-section{padding:24px 19px;margin-bottom:38px}.plan-modal{padding:32px 22px 23px}}
+@media(prefers-reduced-motion:reduce){.plan-modal{animation:none}}
+
+
+/* Working frontend interactions: contact form and plan confirmation */
+.cta{font-family:inherit;border:0;cursor:pointer;text-align:left;width:100%}
+.cta:focus-visible,.modal-close:focus-visible,.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:3px solid #8dbd51;outline-offset:3px}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:44px 38px;margin:0 0 55px;border:1px solid #e3e9df;border-radius:18px;background:linear-gradient(125deg,#fbfdf8,#f0f5e9)}
+.contact-copy h2{font:800 clamp(29px,4vw,43px)/1.12 "Manrope",sans-serif;letter-spacing:-2px}
+.contact-copy h2 span{color:#819b6c}
+.contact-copy>p:last-child{max-width:360px;color:#77817a;font-size:12px;line-height:1.8}
+.contact-form{display:grid;gap:8px}
+.contact-form label{margin-top:5px;color:#59645d;font-size:10px;font-weight:700}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #dfe6da;border-radius:8px;background:#fff;padding:11px 12px;color:#1d2a22;font:12px "DM Sans",sans-serif;resize:vertical}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#a5ada5}
+.contact-submit{margin-top:7px}
+.form-note{min-height:14px;margin:2px 0 0;color:#8b958d;font-size:9px}
+.form-note.success{color:#4f7b2e;font-weight:700}
+.modal-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#17231dcc;backdrop-filter:blur(5px)}
+.modal-backdrop[hidden]{display:none}
+.plan-modal{position:relative;width:min(420px,100%);padding:35px 30px 28px;border:1px solid #e5ebdf;border-radius:19px;background:#fff;box-shadow:0 25px 80px #101b1450;text-align:center;animation:modal-in .22s ease-out}
+@keyframes modal-in{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-close{position:absolute;top:12px;right:14px;width:31px;height:31px;border:0;border-radius:50%;background:#f0f3ed;color:#52604f;font-size:22px;cursor:pointer}
+.modal-mark{display:grid;place-items:center;width:45px;height:45px;margin:0 auto 17px;border-radius:14px;background:#eaf5db;color:#6b963d;font-size:22px}
+.plan-modal h2{font:800 27px "Manrope",sans-serif;letter-spacing:-1px}
+.plan-modal>p:not(.plan-kicker){color:#77817a;font-size:11px;line-height:1.7}
+.modal-summary{display:grid;gap:5px;margin:20px 0;padding:17px;border:1px solid #e7ece2;border-radius:11px;background:#f8faf5}
+.modal-summary span{color:#77817a;font-size:10px}
+.modal-summary strong{font:800 31px "Manrope",sans-serif;letter-spacing:-1px}
+.modal-summary small{color:#89938a;font-size:9px}
+.plan-modal .modal-disclaimer{font-size:9px;color:#9aa39b}
+.modal-done{margin-top:14px}
+body.modal-open{overflow:hidden}
+@media(max-width:800px){.contact-section{grid-template-columns:1fr;gap:22px;padding:28px 24px}}
+@media(max-width:520px){.contact-section{padding:24px 19px;margin-bottom:38px}.plan-modal{padding:32px 22px 23px}}
+@media(prefers-reduced-motion:reduce){.plan-modal{animation:none}}
